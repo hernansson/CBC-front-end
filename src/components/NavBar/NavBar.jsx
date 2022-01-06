@@ -113,7 +113,7 @@ export default function NavBar() {
   return (
     <Box sx={{ flexGrow: 1 }}>
       <AppBar position='static' sx={{ backgroundColor: 'black' }}>
-        <Toolbar>
+        <Toolbar style={{ padding: '0rem 1rem' }}>
           <NavHistory />
           <Box sx={{ flexGrow: 1 }} />
           <ResponsiveMenu handleProfileMenuOpen={handleProfileMenuOpen} />

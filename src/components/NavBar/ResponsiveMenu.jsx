@@ -60,10 +60,16 @@ export default function ResponsiveMenu({ handleProfileMenuOpen }) {
           height: '45px',
         }}
       />
-      <IconButton size='small' color='inherit' sx={{ flexDirection: 'column' }}>
-        <SearchOutlinedIcon />
-        Search
-      </IconButton>
+      <div className={navStyles.hoverArrowAnimation}>
+        <IconButton
+          size='small'
+          color='inherit'
+          sx={{ flexDirection: 'column' }}
+        >
+          <SearchOutlinedIcon />
+          Search
+        </IconButton>
+      </div>
       <IconButton size='small' color='inherit' sx={{ flexDirection: 'column' }}>
         <MenuIcon />
         Menu
