@@ -11,12 +11,7 @@ export default function NavHistory() {
 
   const navStyles = useStyles();
   return (
-    <Box
-      sx={{
-        display: 'flex',
-        alignItems: 'center',
-      }}
-    >
+    <>
       <Link to='/'>
         <img
           src='https://www.cbcins.com/Datasource2Demo/images/datasource_cube.png'
@@ -48,6 +43,6 @@ export default function NavHistory() {
           </div>
         </>
       )}
-    </Box>
+    </>
   );
 }

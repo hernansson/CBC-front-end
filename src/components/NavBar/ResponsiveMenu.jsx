@@ -12,7 +12,7 @@ import MenuIcon from '@mui/icons-material/Menu';
 export default function ResponsiveMenu({ handleProfileMenuOpen }) {
   const navStyles = useStyles();
   return (
-    <Box sx={{ display: { xs: 'none', md: 'flex' }, alignItems: 'center' }}>
+    <>
       <IconButton
         size='large'
         edge='end'
@@ -74,6 +74,6 @@ export default function ResponsiveMenu({ handleProfileMenuOpen }) {
         <MenuIcon />
         Menu
       </IconButton>
-    </Box>
+    </>
   );
 }
