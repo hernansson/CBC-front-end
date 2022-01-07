@@ -7,6 +7,7 @@ import MenuItem from '@mui/material/MenuItem';
 import FolderOpenIcon from '@mui/icons-material/FolderOpen';
 import { Typography } from '@material-ui/core';
 import { kingsHawaiianMenu } from '../../constants/menu';
+import Menu from '@mui/icons-material/Menu';
 
 export default function SubNavBar() {
   return (
@@ -19,6 +20,7 @@ export default function SubNavBar() {
             </IconButton>
             <Typography variant='h5'>{`King's Hawaiian`}</Typography>
           </MenuItem>
+
           {kingsHawaiianMenu.map((menuItem) => (
             <MenuItem>
               <IconButton>

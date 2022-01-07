@@ -60,3 +60,35 @@ export const kingsHawaiianMenu = [
     path: 'leaves',
   },
 ];
+export const dashboardList = [
+  {
+    id: 1,
+    title: 'Note',
+    icon: 'https://www.cbcins.com/Datasource2Demo/images/NoteIcon.svg',
+  },
+  {
+    id: 2,
+    title: 'Email',
+    icon: 'https://www.cbcins.com/Datasource2Demo/images/EmailIcon.svg',
+  },
+  {
+    id: 3,
+    title: 'Call',
+    icon: 'https://www.cbcins.com/Datasource2Demo/images/PhoneIcon.svg',
+  },
+  {
+    id: 4,
+    title: 'Log',
+    icon: 'https://www.cbcins.com/Datasource2Demo/images/LogIcon.svg',
+  },
+  {
+    id: 5,
+    title: 'Task',
+    icon: 'https://www.cbcins.com/Datasource2Demo/images/TaskIcon.svg',
+  },
+  {
+    id: 6,
+    title: 'Meeting',
+    icon: 'https://www.cbcins.com/Datasource2Demo/images/MeetingIcon.svg',
+  },
+];
