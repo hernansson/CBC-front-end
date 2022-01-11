@@ -8,7 +8,7 @@ function App() {
   return (
     <div className='App'>
       <NavBar />
-      <SubNavBar />
+
       <Routes>
         <Route path='/' element={<Home />} />
         {groupRoutes}

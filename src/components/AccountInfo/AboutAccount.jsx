@@ -12,45 +12,52 @@ export default function AboutAccount() {
         paddingLeft: '1vw',
       }}
     >
-      <h2
-        variant='h2'
-        style={{ fontSize: '1.875vw', fontWeight: '300', margin: 0 }}
-      >
+      <h2 variant='h2' style={{ fontWeight: '300', margin: 0 }}>
         About this Account
       </h2>
-      <span>Benefit Portal Url:</span>
+      <Box component='span'>Benefit Portal Url:</Box>
       <a href='' style={{ color: 'red' }}>
-        www.KHKokua.com
+        {'www.KHKokua.com'}
       </a>
       <p style={{ margin: 0 }}>&nbsp;</p>
-      <span>Benefit Portal Url:</span>
+      <Box component='span'>Benefit Portal Url:</Box>
       <a href='' style={{ color: 'red' }}>
-        www.KHKokua.com
+        {'www.KHKokua.com'}
       </a>
       <p style={{ margin: 0 }}>&nbsp;</p>
-      <span>
+      <Box component='span'>
         Account Manager:
-        <span style={{ color: '#99999a' }}>{'Harmony Diaz'}</span>
-      </span>
-      <span>
+        <Box component='span' style={{ color: '#99999a' }}>
+          {'Harmony Diaz'}
+        </Box>
+      </Box>
+      <Box component='span'>
         Consultant:
-        <span style={{ color: '#99999a' }}>{'CBC management'}</span>
-      </span>
-      <span>
+        <Box component='span' style={{ color: '#99999a' }}>
+          {'CBC management'}
+        </Box>
+      </Box>
+      <Box component='span'>
         Account Contact:
-        <span style={{ color: '#99999a' }}>{'Judy Burke'}</span>
-      </span>
+        <Box component='span' style={{ color: '#99999a' }}>
+          {'Judy Burke'}
+        </Box>
+      </Box>
       <p style={{ margin: 0 }}>&nbsp;</p>
-      <span style={{ display: 'flex' }}>
+      <Box component='span' style={{ display: 'flex' }}>
         <CallIcon />
         Phone:
-        <span style={{ color: '#99999a' }}>{'Judy Burke'}</span>
-      </span>
-      <span style={{ display: 'flex' }}>
+        <Box component='span' style={{ color: '#99999a' }}>
+          {` ${'(888) 123-4567'}`}
+        </Box>
+      </Box>
+      <Box component='span' style={{ display: 'flex' }}>
         <FaxIcon />
         Fax:
-        <span style={{ color: '#99999a' }}>{'Judy Burke'}</span>
-      </span>
+        <Box component='span' style={{ color: '#99999a' }}>
+          {`${'(888) 123-4567'}`}
+        </Box>
+      </Box>
     </Box>
   );
 }

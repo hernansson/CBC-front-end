@@ -1,7 +1,7 @@
 import Box from '@mui/material/Box';
 import IconButton from '@mui/material/IconButton';
 import { Link, useLocation } from 'react-router-dom';
-import { generalMenu } from './generalMenu';
+import { generalMenu } from '../../constants/menu';
 import useStyles from './NavStyles';
 export default function NavHistory() {
   const location = useLocation();
