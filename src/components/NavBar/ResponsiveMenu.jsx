@@ -9,7 +9,15 @@ import Typography from '@mui/material/Typography';
 import useStyles from './NavStyles';
 import Divider from '@mui/material/Divider';
 import MenuIcon from '@mui/icons-material/Menu';
+import { useState, useRef } from 'react';
+import SideMenu from './SideMenu/SideMenu';
 export default function ResponsiveMenu({ handleProfileMenuOpen }) {
+  const [open, setOpen] = useState(false);
+  const anchorRef = useRef(null);
+
+  const handleToggle = () => {
+    setOpen((prevOpen) => !prevOpen);
+  };
   const navStyles = useStyles();
   return (
     <>
@@ -28,6 +36,7 @@ export default function ResponsiveMenu({ handleProfileMenuOpen }) {
           />
         </div>
       </IconButton>
+
       <IconButton
         size='large'
         aria-label='show 17 new notifications'
@@ -37,21 +46,28 @@ export default function ResponsiveMenu({ handleProfileMenuOpen }) {
           <NotificationsIcon />
         </Badge>
       </IconButton>
-      <Typography>Jessica Poller</Typography>
-
-      <IconButton
-        size='small'
-        aria-label='show 4 new mails'
-        color='inherit'
-        sx={{ flexDirection: 'column' }}
-      >
-        <SettingsIcon />
-        Settings
-      </IconButton>
-      <IconButton size='small' color='inherit' sx={{ flexDirection: 'column' }}>
-        <MeetingRoomIcon />
-        Logout
-      </IconButton>
+      <Typography>{'Jessica Poller'}</Typography>
+      <Box className={navStyles.hoverArrowAnimation}>
+        <IconButton
+          size='small'
+          aria-label='show 4 new mails'
+          color='inherit'
+          sx={{ flexDirection: 'column' }}
+        >
+          <SettingsIcon />
+          Settings
+        </IconButton>
+      </Box>
+      <Box className={navStyles.hoverArrowAnimation}>
+        <IconButton
+          size='small'
+          color='inherit'
+          sx={{ flexDirection: 'column' }}
+        >
+          <MeetingRoomIcon />
+          Logout
+        </IconButton>
+      </Box>
       <Divider
         orientation='vertical'
         sx={{
@@ -60,7 +76,7 @@ export default function ResponsiveMenu({ handleProfileMenuOpen }) {
           height: '45px',
         }}
       />
-      <div className={navStyles.hoverArrowAnimation}>
+      <Box className={navStyles.hoverArrowAnimation}>
         <IconButton
           size='small'
           color='inherit'
@@ -69,11 +85,20 @@ export default function ResponsiveMenu({ handleProfileMenuOpen }) {
           <SearchOutlinedIcon />
           Search
         </IconButton>
-      </div>
-      <IconButton size='small' color='inherit' sx={{ flexDirection: 'column' }}>
-        <MenuIcon />
-        Menu
-      </IconButton>
+      </Box>
+      <Box className={navStyles.hoverArrowAnimation}>
+        <IconButton
+          ref={anchorRef}
+          onClick={handleToggle}
+          size='small'
+          color='inherit'
+          sx={{ flexDirection: 'column' }}
+        >
+          <MenuIcon />
+          Menu
+        </IconButton>
+      </Box>
+      <SideMenu open={open} setOpen={setOpen} anchorRef={anchorRef} />
     </>
   );
 }

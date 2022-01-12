@@ -25,6 +25,10 @@ const useStyles = makeStyles((theme) => ({
       backgroundPosition: 'center 0px',
     },
   },
+  sideBarIcon: {
+    height: '35px',
+    width: '38px',
+  },
 }));
 
 export default useStyles;

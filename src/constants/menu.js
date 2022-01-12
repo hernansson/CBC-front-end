@@ -65,8 +65,7 @@ export const dashboardList = [
     id: 1,
     title: 'Note',
     icon: 'https://www.cbcins.com/Datasource2Demo/images/NoteIcon.svg',
-    iconRed:
-      'https://www.cbcins.com/Datasource2Demo/images/MeetingIcon_Red.svg',
+    iconRed: 'https://www.cbcins.com/Datasource2Demo/images/NoteIcon_Red.svg',
   },
   {
     id: 2,
@@ -83,8 +82,8 @@ export const dashboardList = [
   {
     id: 4,
     title: 'Log',
-    icon: 'https://www.cbcins.com/Datasource2Demo/images/PhoneIcon.svg',
-    iconRed: 'https://www.cbcins.com/Datasource2Demo/images/PhoneIcon_Red.svg',
+    icon: 'https://www.cbcins.com/Datasource2Demo/images/LogIcon.svg',
+    iconRed: 'https://www.cbcins.com/Datasource2Demo/images/LogIcon_Red.svg',
   },
   {
     id: 5,
@@ -120,6 +119,68 @@ export const generalMenu = [
     category: 'Leave',
     type: 'System',
     icon: 'https://www.cbcins.com/Datasource2Demo/images/LeaveSystem_logo1.png',
-    path: 'leave',
+    path: 'leaves',
+  },
+];
+export const sideMenu = [
+  {
+    id: 1,
+    title: 'Home',
+    icon: 'https://www.cbcins.com/Datasource2Demo/images/HomeIcon.svg',
+    path: '/home',
+  },
+  {
+    id: 2,
+    title: 'Users',
+    icon: 'https://www.cbcins.com/Datasource2Demo/images/UsersIcon.svg',
+    path: '/users',
+  },
+  {
+    id: 3,
+    title: 'Accounts',
+    icon: 'https://www.cbcins.com/Datasource2Demo/images/AccountsIcon.svg',
+    path: '/accounts',
+  },
+  {
+    id: 4,
+    title: 'Plan Library',
+    icon: 'https://www.cbcins.com/Datasource2Demo/images/PlanLibraryIcon.svg',
+    path: 'planlibrary',
+  },
+  {
+    id: 5,
+    title: 'Carriers',
+    icon: 'https://www.cbcins.com/Datasource2Demo/images/CarriersIcon.svg',
+    path: 'carriers',
+  },
+  {
+    id: 6,
+    title: 'Vendors',
+    icon: 'https://www.cbcins.com/Datasource2Demo/images/VendorsIcon.svg',
+    path: 'vendors',
+  },
+  {
+    id: 7,
+    title: 'Invoices',
+    icon: 'https://www.cbcins.com/Datasource2Demo/images/invoicesIcon.svg',
+    path: 'invoices',
+  },
+  {
+    id: 8,
+    title: 'Service',
+    icon: 'https://www.cbcins.com/Datasource2Demo/images/ServiceIcon.svg',
+    path: 'service',
+  },
+  {
+    id: 9,
+    title: 'Reports',
+    icon: 'https://www.cbcins.com/Datasource2Demo/images/ReportsIcon.svg',
+    path: 'reports',
+  },
+  {
+    id: 10,
+    title: 'Commissions',
+    icon: 'https://www.cbcins.com/Datasource2Demo/images/CommissionsIcon.svg',
+    path: 'commisions',
   },
 ];

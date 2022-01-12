@@ -6,7 +6,6 @@ import mainStyles from './MainStyles';
 import { tabs } from './tabs';
 import Activity from './Panels/Activity/Activity';
 import TabPanel from './Panels/TabPanel';
-import TextField from '@mui/material/TextField';
 import { TextFieldFocus } from '../StyledComponents/TextFieldFocusColor';
 import InputAdornment from '@material-ui/core/InputAdornment';
 import SearchIcon from '@mui/icons-material/Search';
@@ -37,7 +36,7 @@ export default function MainPanel() {
           InputProps={{
             endAdornment: (
               <InputAdornment>
-                <SearchIcon />
+                <SearchIcon sx={{ color: 'red' }} />
               </InputAdornment>
             ),
           }}
@@ -47,6 +46,7 @@ export default function MainPanel() {
           <span className={mStyles.collapse}>Collapse All</span>
         </Box>
       </Box>
+      <Box>&nbsp;</Box>
       <Box>
         <Tabs
           value={value}
@@ -62,10 +62,14 @@ export default function MainPanel() {
             },
           }}
           textColor='black'
-          sx={{ alignItems: 'left' }}
+          sx={{
+            alignItems: 'left',
+            borderBottom: '1px solid black',
+            height: '1rem',
+          }}
         >
           {tabs.map((tab, idx) => (
-            <Tab className={mStyles.MuiTab} label={tab.title} s></Tab>
+            <Tab className={mStyles.MuiTab} label={tab.title} />
           ))}
         </Tabs>
         <TabPanel value={value} index={0}>

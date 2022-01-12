@@ -4,7 +4,6 @@ import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
 import IconButton from '@mui/material/IconButton';
-import Typography from '@mui/material/Typography';
 import Badge from '@mui/material/Badge';
 import MenuItem from '@mui/material/MenuItem';
 import Menu from '@mui/material/Menu';
@@ -12,7 +11,6 @@ import AccountCircle from '@mui/icons-material/AccountCircle';
 import MailIcon from '@mui/icons-material/Mail';
 import NotificationsIcon from '@mui/icons-material/Notifications';
 import MoreIcon from '@mui/icons-material/MoreVert';
-import Divider from '@mui/material/Divider';
 import NavHistory from './NavHistory';
 import ResponsiveMenu from './ResponsiveMenu';
 
@@ -112,7 +110,10 @@ export default function NavBar() {
 
   return (
     <Box sx={{ flexGrow: 1 }}>
-      <AppBar position='static' sx={{ backgroundColor: 'black' }}>
+      <AppBar
+        position='static'
+        sx={{ backgroundColor: 'black', height: '4rem' }}
+      >
         <Toolbar style={{ padding: '0rem 1rem' }}>
           <Box sx={{ display: 'flex', alignItems: 'center' }}>
             <NavHistory />

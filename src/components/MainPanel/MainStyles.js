@@ -3,7 +3,7 @@ import { makeStyles } from '@material-ui/core/styles';
 const mainStyles = makeStyles((theme) => ({
   MuiTab: {
     '&:hover': {
-      borderBottom: '3px solid black',
+      borderBottom: '5px solid black',
     },
   },
   filters: {
