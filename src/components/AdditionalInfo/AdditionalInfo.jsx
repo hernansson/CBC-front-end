@@ -37,7 +37,12 @@ export default function AdditionalInfo() {
                 width: '100%',
               }}
             >
-              <Typography>{card.title}</Typography>
+              <Box
+                component={'span'}
+                sx={{ fontSize: '1.5rem', fontWeight: ' 300' }}
+              >
+                {card.title}
+              </Box>
               <Link
                 to={card.link}
                 style={{ color: '#D9202A', textDecoration: 'none' }}

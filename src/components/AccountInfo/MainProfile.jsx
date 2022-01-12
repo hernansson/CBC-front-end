@@ -4,6 +4,7 @@ import accountStyles from './AccountStyles';
 import IconButton from '@mui/material/IconButton';
 import { dashboardList } from '../../constants/menu';
 import { Link } from 'react-router-dom';
+
 export default function MainProfile() {
   const accStyles = accountStyles();
   return (
@@ -54,14 +55,20 @@ export default function MainProfile() {
         sx={{
           display: 'flex',
           flexDirection: 'row',
-          columnGap: '1vw',
-          overflow: 'hidden',
+          columnGap: '1rem',
+          flexWrap: 'wrap',
         }}
       >
         {dashboardList.map((dashItem) => (
           <Link to='/'>
             <div className={accStyles.iconButton}>
-              <img className={accStyles.icon} src={dashItem.icon} alt='' />
+              <img
+                className={accStyles.icon}
+                src={dashItem.icon}
+                alt=''
+                onMouseOver={(e) => (e.currentTarget.src = dashItem.iconRed)}
+                onMouseLeave={(e) => (e.currentTarget.src = dashItem.icon)}
+              />
             </div>
 
             <Typography>{dashItem.title}</Typography>

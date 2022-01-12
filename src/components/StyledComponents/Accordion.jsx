@@ -4,7 +4,9 @@ import MuiAccordionDetails from '@mui/material/AccordionDetails';
 import { styled } from '@mui/material/styles';
 import { makeStyles } from '@material-ui/core/styles';
 import ArrowForwardIosSharpIcon from '@mui/icons-material/ArrowForwardIosSharp';
+import InfoIcon from '@mui/icons-material/Info';
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 const useStyles = makeStyles((theme) => ({
   arrowIcon: {
     transform: 'rotate(90deg)',
@@ -29,7 +31,7 @@ export const AccordionSummary = styled((props) => (
 }));
 
 export const AccordionSummaryCustom = styled(
-  ({ category, date, summary, ...props }) => {
+  ({ category, date, summary, id, ...props }) => {
     const [expanded, setExpanded] = useState(false);
     const styles = useStyles();
     return (
@@ -64,6 +66,10 @@ export const AccordionSummaryCustom = styled(
           >
             {summary}
           </div>
+          <Link to='' style={{ display: 'flex', justifyContent: 'flex-end' }}>
+            View Details
+            <InfoIcon sx={{ color: 'red' }} />
+          </Link>
         </div>
       </MuiAccordionSummary>
     );

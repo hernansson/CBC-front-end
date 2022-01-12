@@ -5,7 +5,10 @@ export default function SupportTicketsCard() {
   const cStyle = cardStyles();
   return (
     <Box className={cStyle.card}>
-      For future Development
+      <Box component={'span'} sx={{ color: '#737373' }}>
+        For future Development
+      </Box>
+
       <p style={{ margin: 0 }}>&nbsp;</p>
       <Link to='' style={{ color: 'red' }}>
         View All Contacts

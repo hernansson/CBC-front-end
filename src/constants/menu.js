@@ -65,31 +65,39 @@ export const dashboardList = [
     id: 1,
     title: 'Note',
     icon: 'https://www.cbcins.com/Datasource2Demo/images/NoteIcon.svg',
+    iconRed:
+      'https://www.cbcins.com/Datasource2Demo/images/MeetingIcon_Red.svg',
   },
   {
     id: 2,
     title: 'Email',
     icon: 'https://www.cbcins.com/Datasource2Demo/images/EmailIcon.svg',
+    iconRed: 'https://www.cbcins.com/Datasource2Demo/images/EmailIcon_Red.svg',
   },
   {
     id: 3,
     title: 'Call',
     icon: 'https://www.cbcins.com/Datasource2Demo/images/PhoneIcon.svg',
+    iconRed: 'https://www.cbcins.com/Datasource2Demo/images/PhoneIcon_Red.svg',
   },
   {
     id: 4,
     title: 'Log',
-    icon: 'https://www.cbcins.com/Datasource2Demo/images/LogIcon.svg',
+    icon: 'https://www.cbcins.com/Datasource2Demo/images/PhoneIcon.svg',
+    iconRed: 'https://www.cbcins.com/Datasource2Demo/images/PhoneIcon_Red.svg',
   },
   {
     id: 5,
     title: 'Task',
     icon: 'https://www.cbcins.com/Datasource2Demo/images/TaskIcon.svg',
+    iconRed: 'https://www.cbcins.com/Datasource2Demo/images/TaskIcon_Red.svg',
   },
   {
     id: 6,
     title: 'Meeting',
     icon: 'https://www.cbcins.com/Datasource2Demo/images/MeetingIcon.svg',
+    iconRed:
+      'https://www.cbcins.com/Datasource2Demo/images/MeetingIcon_Red.svg',
   },
 ];
 export const generalMenu = [
