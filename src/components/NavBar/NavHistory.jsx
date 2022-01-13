@@ -5,6 +5,7 @@ import useStyles from './NavStyles';
 import { useState, useRef, useContext } from 'react';
 import SideGroupMenu from './SideGroupMenu/SideGroupMenu';
 import CategoryContext from '../../context/CategoryContext';
+
 export default function NavHistory() {
   const { getMenu } = useContext(CategoryContext);
   const menu = getMenu();
@@ -17,7 +18,9 @@ export default function NavHistory() {
   return (
     <>
       <Box
+        ref={anchorRef}
         onMouseEnter={handleToggle}
+        onMouseLeave={handleToggle}
         style={{ display: 'flex', alignItems: 'center' }}
       >
         <Link to='/'>
@@ -39,13 +42,13 @@ export default function NavHistory() {
             />
           </>
         )}
+        <SideGroupMenu
+          open={open}
+          setOpen={setOpen}
+          anchorRef={anchorRef}
+          menu={menu.restMenu}
+        />
       </Box>
-      <SideGroupMenu
-        open={open}
-        setOpen={setOpen}
-        anchorRef={anchorRef}
-        menu={menu.restMenu}
-      />
     </>
   );
 }

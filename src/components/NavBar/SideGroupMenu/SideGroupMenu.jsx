@@ -18,10 +18,9 @@ export default function SideGroupMenu({ open, setOpen, anchorRef, menu }) {
       <Popper
         open={open}
         anchorEl={anchorRef.current}
-        role={undefined}
         transition
         disablePortal
-        style={{ zIndex: '1' }}
+        style={{ zIndex: '1', width: '20%' }}
       >
         {({ TransitionProps, placement }) => (
           <Grow
@@ -32,7 +31,7 @@ export default function SideGroupMenu({ open, setOpen, anchorRef, menu }) {
           >
             <Paper style={{ backgroundColor: 'rgba(0,0,0,.80)' }}>
               <ClickAwayListener onClickAway={handleClose}>
-                <MenuList onMouseLeave={handleClose}>
+                <MenuList>
                   {menu.map((menuItem, idx) => (
                     <MenuItem
                       onClick={handleClose}
