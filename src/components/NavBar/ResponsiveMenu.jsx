@@ -11,12 +11,18 @@ import Divider from '@mui/material/Divider';
 import MenuIcon from '@mui/icons-material/Menu';
 import { useState, useRef } from 'react';
 import SideMenu from './SideMenu/SideMenu';
+import SideSearch from './SideSearch/SideSearch';
 export default function ResponsiveMenu({ handleProfileMenuOpen }) {
-  const [open, setOpen] = useState(false);
-  const anchorRef = useRef(null);
+  const [openSideMenu, setOpenSideMenu] = useState(false);
+  const [openSearch, setOpenSearch] = useState(false);
+  const anchorSideMenu = useRef(null);
+  const anchorSearch = useRef(null);
 
-  const handleToggle = () => {
-    setOpen((prevOpen) => !prevOpen);
+  const handleToggleSideMenu = () => {
+    setOpenSideMenu((prevOpen) => !prevOpen);
+  };
+  const handleToggleSearch = () => {
+    setOpenSearch((prevOpen) => !prevOpen);
   };
   const navStyles = useStyles();
   return (
@@ -47,7 +53,7 @@ export default function ResponsiveMenu({ handleProfileMenuOpen }) {
         </Badge>
       </IconButton>
       <Typography>{'Jessica Poller'}</Typography>
-      <Box className={navStyles.hoverArrowAnimation}>
+      <Box className={navStyles.generalHover}>
         <IconButton
           size='small'
           aria-label='show 4 new mails'
@@ -58,7 +64,7 @@ export default function ResponsiveMenu({ handleProfileMenuOpen }) {
           Settings
         </IconButton>
       </Box>
-      <Box className={navStyles.hoverArrowAnimation}>
+      <Box className={navStyles.generalHover}>
         <IconButton
           size='small'
           color='inherit'
@@ -76,8 +82,10 @@ export default function ResponsiveMenu({ handleProfileMenuOpen }) {
           height: '45px',
         }}
       />
-      <Box className={navStyles.hoverArrowAnimation}>
+      <Box className={navStyles.generalHover}>
         <IconButton
+          ref={anchorSearch}
+          onClick={handleToggleSearch}
           size='small'
           color='inherit'
           sx={{ flexDirection: 'column' }}
@@ -86,10 +94,10 @@ export default function ResponsiveMenu({ handleProfileMenuOpen }) {
           Search
         </IconButton>
       </Box>
-      <Box className={navStyles.hoverArrowAnimation}>
+      <Box className={navStyles.generalHover}>
         <IconButton
-          ref={anchorRef}
-          onClick={handleToggle}
+          ref={anchorSideMenu}
+          onClick={handleToggleSideMenu}
           size='small'
           color='inherit'
           sx={{ flexDirection: 'column' }}
@@ -98,7 +106,16 @@ export default function ResponsiveMenu({ handleProfileMenuOpen }) {
           Menu
         </IconButton>
       </Box>
-      <SideMenu open={open} setOpen={setOpen} anchorRef={anchorRef} />
+      <SideMenu
+        open={openSideMenu}
+        setOpen={setOpenSideMenu}
+        anchorRef={anchorSideMenu}
+      />
+      <SideSearch
+        open={openSearch}
+        setOpen={setOpenSearch}
+        anchorRef={anchorSearch}
+      />
     </>
   );
 }

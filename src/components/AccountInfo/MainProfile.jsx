@@ -4,6 +4,7 @@ import accountStyles from './AccountStyles';
 import IconButton from '@mui/material/IconButton';
 import { dashboardList } from '../../constants/menu';
 import { Link } from 'react-router-dom';
+import InfoIcon from '@mui/icons-material/Info';
 
 export default function MainProfile() {
   const accStyles = accountStyles();
@@ -45,10 +46,23 @@ export default function MainProfile() {
         <Box>
           <img
             className={accStyles.dashboard}
+            onMouseOver={(e) =>
+              (e.currentTarget.src =
+                'https://www.cbcins.com/Datasource2Demo/images/DashboardIconRed.svg')
+            }
+            onMouseLeave={(e) =>
+              (e.currentTarget.src =
+                'https://www.cbcins.com/Datasource2Demo/images/DashboardIcon.svg')
+            }
             src='https://www.cbcins.com/Datasource2Demo/images/DashboardIcon.svg'
             alt='dashboard'
           />
-          <Typography variant='body2'>My Dashboard</Typography>
+          <Box sx={{ display: 'flex' }}>
+            <Typography variant='body2' style={{ textDecoration: 'underline' }}>
+              My Dashboard
+            </Typography>
+            <InfoIcon sx={{ color: 'red' }} />
+          </Box>
         </Box>
       </Box>
       <Box

@@ -20,7 +20,7 @@ export default function SideGroupMenu({ open, setOpen, anchorRef, menu }) {
         anchorEl={anchorRef.current}
         transition
         disablePortal
-        style={{ zIndex: '1', width: '20%' }}
+        style={{ zIndex: '1', width: '400px' }}
       >
         {({ TransitionProps, placement }) => (
           <Grow

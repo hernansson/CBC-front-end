@@ -10,7 +10,7 @@ const useStyles = makeStyles((theme) => ({
     display: 'flex',
     marginRight: '-15px',
   },
-  hoverArrowAnimation: {
+  generalHover: {
     cursor: 'pointer',
     pointerEvents: 'auto',
     height: '100%',
@@ -20,10 +20,32 @@ const useStyles = makeStyles((theme) => ({
     backgroundSize: '100% 100%',
     backgroundPosition: 'center -90px',
     transition: 'all 200ms ease',
-
+    display: 'flex',
     '&:hover': {
       backgroundPosition: 'center 0px',
     },
+  },
+  arrow: {
+    width: '50px',
+    display: 'flex',
+    flexDirection: 'column',
+    justifyContent: 'center',
+    alignItems: 'center',
+    cursor: 'pointer',
+    pointerEvents: 'auto',
+    height: '100%',
+    backgroundImage:
+      'url(https://www.cbcins.com/Datasource2Demo/images/Rectangle%20876.png)',
+    backgroundRepeat: 'no-repeat',
+    backgroundSize: '100% 100%',
+    transition: 'all 200ms ease',
+  },
+
+  hoverInactive: {
+    backgroundPosition: 'center -90px',
+  },
+  hoverActive: {
+    backgroundPosition: 'center 0px',
   },
   sideBarIcon: {
     height: '35px',

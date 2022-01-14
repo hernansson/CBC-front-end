@@ -115,12 +115,16 @@ export default function NavBar() {
         sx={{ backgroundColor: 'black', height: '4rem' }}
       >
         <Toolbar style={{ padding: '0rem 1rem' }}>
-          <Box sx={{ display: 'flex', alignItems: 'center' }}>
+          <Box sx={{ display: 'flex', alignItems: 'center', height: '100%' }}>
             <NavHistory />
           </Box>
           <Box sx={{ flexGrow: 1 }} />
           <Box
-            sx={{ display: { xs: 'none', md: 'flex' }, alignItems: 'center' }}
+            sx={{
+              display: { xs: 'none', md: 'flex' },
+              alignItems: 'center',
+              height: '100%',
+            }}
           >
             <ResponsiveMenu handleProfileMenuOpen={handleProfileMenuOpen} />
           </Box>

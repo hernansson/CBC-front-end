@@ -11,7 +11,7 @@ export default function NavHistory() {
   const menu = getMenu();
   const [open, setOpen] = useState(false);
   const anchorRef = useRef(null);
-
+  const nStyles = useStyles();
   const handleToggle = () => {
     setOpen((prevOpen) => !prevOpen);
   };
@@ -21,7 +21,7 @@ export default function NavHistory() {
         ref={anchorRef}
         onMouseEnter={handleToggle}
         onMouseLeave={handleToggle}
-        style={{ display: 'flex', alignItems: 'center' }}
+        sx={{ display: 'flex', alignItems: 'center', height: '100%' }}
       >
         <Link to='/'>
           <img
@@ -36,10 +36,18 @@ export default function NavHistory() {
               alt='Arrow'
             />
             <img src={menu.active.icon} alt='LargeGroup' />
-            <img
-              src='https://www.cbcins.com/Datasource2Demo/images/light_double_arrow.png'
-              alt='ArrowDown'
-            />
+            <Box
+              className={[
+                nStyles.arrow,
+                !open ? nStyles.hoverInactive : nStyles.hoverActive,
+              ]}
+            >
+              <img
+                style={{ width: '40px' }}
+                src='https://www.cbcins.com/Datasource2Demo/images/light_double_arrow.png'
+                alt='ArrowDown'
+              />
+            </Box>
           </>
         )}
         <SideGroupMenu

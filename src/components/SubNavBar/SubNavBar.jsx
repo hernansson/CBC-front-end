@@ -26,7 +26,7 @@ export default function SubNavBar() {
     <Box sx={{ flexGrow: 1 }}>
       <AppBar
         position='static'
-        sx={{ backgroundColor: 'rgba(0,0,0,0.75)', height: '4rem' }}
+        sx={{ backgroundColor: 'rgba(0,0,0,0.75)', height: '' }}
       >
         <Toolbar style={{ padding: '0rem 1rem', paddingLeft: '0px' }}>
           <Box
@@ -38,7 +38,10 @@ export default function SubNavBar() {
             <IconButton color='inherit' size='large'>
               <FolderOpenIcon />
             </IconButton>
-            <Typography variant='h5'>{`King's Hawaiian`}</Typography>
+            <Typography
+              sx={{ display: 'inline-block' }}
+              variant='h5'
+            >{`King's Hawaiian`}</Typography>
           </Box>
           <Tabs
             value={value}
@@ -52,7 +55,7 @@ export default function SubNavBar() {
               },
             }}
             textColor='black'
-            sx={{ alignItems: 'left', height: '100%' }}
+            sx={{ display: 'flex', height: '100%' }}
           >
             {kingsHawaiianMenu.map((menuItem, idx) => (
               <Tab
