@@ -5,17 +5,30 @@ import SubNavBar from './components/SubNavBar/SubNavBar';
 import { groupRoutes } from './routes/GroupRoutes';
 import Home from './components/pages/Home/Home';
 import { CategoryProvider } from './context/CategoryContext';
+import { createTheme, ThemeProvider } from '@material-ui/core';
+
+const theme = createTheme({
+  typography: {
+    fontFamily: 'Futura PT',
+    body3: {
+      color: 'red',
+    },
+  },
+});
 function App() {
   return (
     <div className='App'>
-      <CategoryProvider>
-        <NavBar />
-        <SubNavBar />
-        <Routes>
-          <Route path='/' element={<Home />} />
-          {groupRoutes}
-        </Routes>
-      </CategoryProvider>
+      <ThemeProvider theme={theme}>
+        <CategoryProvider>
+          <NavBar />
+          <div className='bodyContent'>
+            <Routes>
+              <Route path='/' element={<Home />} />
+              {groupRoutes}
+            </Routes>
+          </div>
+        </CategoryProvider>
+      </ThemeProvider>
     </div>
   );
 }

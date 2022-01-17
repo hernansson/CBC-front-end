@@ -32,11 +32,9 @@ export default function SideSearch({ open, setOpen, anchorRef }) {
             }}
           >
             <Paper style={{ background: 'transparent' }}>
-              <ClickAwayListener onClickAway={handleClose}>
-                <MenuList sx={{ paddingTop: '0px', paddingBottom: '0px' }}>
-                  <SearchForm />
-                </MenuList>
-              </ClickAwayListener>
+              <MenuList sx={{ paddingTop: '0px', paddingBottom: '0px' }}>
+                <SearchForm handleClose={handleClose} />
+              </MenuList>
             </Paper>
           </Grow>
         )}

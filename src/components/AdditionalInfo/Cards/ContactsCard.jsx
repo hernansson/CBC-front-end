@@ -11,7 +11,10 @@ export default function ContactsCard() {
   return (
     <Box className={cStyle.card}>
       <Box sx={{ textAlign: 'left' }}>
-        <Box component='span' sx={{ fontWeight: '600' }}>{`Lani Baker`}</Box>
+        <Typography
+          component='span'
+          style={{ fontWeight: 600 }}
+        >{`Lani Baker`}</Typography>
         <Box
           component='span'
           sx={{ color: '#99999a' }}
@@ -34,10 +37,10 @@ export default function ContactsCard() {
       </Box>
       <p style={{ margin: 0 }}>&nbsp;</p>
       <Box sx={{ textAlign: 'left' }}>
-        <Box
+        <Typography
           component='span'
-          sx={{ fontWeight: '600' }}
-        >{`Marlene Sanchez`}</Box>
+          style={{ fontWeight: 600 }}
+        >{`Marlene Sanchez`}</Typography>
         <Box component='span' sx={{ color: '#99999a' }}>{` | SHR Analyst`}</Box>
       </Box>
       <Box component='span' sx={{ display: 'flex' }}>

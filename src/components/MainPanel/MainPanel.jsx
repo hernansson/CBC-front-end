@@ -69,7 +69,15 @@ export default function MainPanel() {
           }}
         >
           {tabs.map((tab, idx) => (
-            <Tab className={mStyles.MuiTab} label={tab.title} />
+            <Tab
+              className={mStyles.MuiTab}
+              label={tab.title}
+              sx={{
+                textTransform: 'none',
+                fontFamily: 'Futura PT',
+                fontSize: '1em',
+              }}
+            />
           ))}
         </Tabs>
         <TabPanel value={value} index={0}>

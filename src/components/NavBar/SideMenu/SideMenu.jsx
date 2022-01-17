@@ -28,7 +28,7 @@ export default function SideMenu({ open, setOpen, anchorRef }) {
         role={undefined}
         transition
         disablePortal
-        style={{ zIndex: '1', width: '15%' }}
+        style={{ zIndex: '2', width: '15%' }}
       >
         {({ TransitionProps, placement }) => (
           <Grow

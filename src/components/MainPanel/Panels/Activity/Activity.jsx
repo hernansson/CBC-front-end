@@ -35,7 +35,12 @@ export default function Activity() {
           ></AccordionSummaryCustom>
 
           <AccordionDetails>
-            <Typography sx={{ textAlign: 'left', paddingLeft: '20px' }}>
+            <Typography
+              sx={{
+                textAlign: 'left',
+                paddingLeft: '20px',
+              }}
+            >
               {act.content}
             </Typography>
           </AccordionDetails>

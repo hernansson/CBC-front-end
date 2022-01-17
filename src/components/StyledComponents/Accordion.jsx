@@ -59,7 +59,8 @@ export const AccordionSummaryCustom = styled(
           </div>
           <div
             style={{
-              color: '#99999a',
+              fontFamily: 'Futura PT',
+              color: '#737373',
               textAlign: 'left',
               paddingLeft: '20px',
             }}

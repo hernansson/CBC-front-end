@@ -23,7 +23,7 @@ const accountStyles = makeStyles((theme) => ({
     alignItems: 'center',
     transition: 'all 0.20s ease-in-out',
     '&:hover': {
-      backgroundColor: 'red',
+      backgroundColor: '#D9202A',
     },
   },
   icon: {

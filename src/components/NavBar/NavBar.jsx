@@ -13,6 +13,7 @@ import NotificationsIcon from '@mui/icons-material/Notifications';
 import MoreIcon from '@mui/icons-material/MoreVert';
 import NavHistory from './NavHistory';
 import ResponsiveMenu from './ResponsiveMenu';
+import SubNavBar from '../SubNavBar/SubNavBar';
 
 export default function NavBar() {
   const [anchorEl, setAnchorEl] = useState(null);
@@ -109,41 +110,37 @@ export default function NavBar() {
   );
 
   return (
-    <Box sx={{ flexGrow: 1 }}>
-      <AppBar
-        position='static'
-        sx={{ backgroundColor: 'black', height: '4rem' }}
-      >
-        <Toolbar style={{ padding: '0rem 1rem' }}>
-          <Box sx={{ display: 'flex', alignItems: 'center', height: '100%' }}>
-            <NavHistory />
-          </Box>
-          <Box sx={{ flexGrow: 1 }} />
-          <Box
-            sx={{
-              display: { xs: 'none', md: 'flex' },
-              alignItems: 'center',
-              height: '100%',
-            }}
+    <AppBar position='sticky' sx={{ backgroundColor: 'black', height: '4rem' }}>
+      <Toolbar style={{ padding: '0rem 1rem' }}>
+        <Box sx={{ display: 'flex', alignItems: 'center', height: '100%' }}>
+          <NavHistory />
+        </Box>
+        <Box sx={{ flexGrow: 1 }} />
+        <Box
+          sx={{
+            display: { xs: 'none', md: 'flex' },
+            alignItems: 'center',
+            height: '100%',
+          }}
+        >
+          <ResponsiveMenu handleProfileMenuOpen={handleProfileMenuOpen} />
+        </Box>
+        <Box sx={{ display: { xs: 'flex', md: 'none' } }}>
+          <IconButton
+            size='large'
+            aria-label='show more'
+            aria-controls={mobileMenuId}
+            aria-haspopup='true'
+            onClick={handleMobileMenuOpen}
+            color='inherit'
           >
-            <ResponsiveMenu handleProfileMenuOpen={handleProfileMenuOpen} />
-          </Box>
-          <Box sx={{ display: { xs: 'flex', md: 'none' } }}>
-            <IconButton
-              size='large'
-              aria-label='show more'
-              aria-controls={mobileMenuId}
-              aria-haspopup='true'
-              onClick={handleMobileMenuOpen}
-              color='inherit'
-            >
-              <MoreIcon />
-            </IconButton>
-          </Box>
-        </Toolbar>
-      </AppBar>
+            <MoreIcon />
+          </IconButton>
+        </Box>
+      </Toolbar>
+      <SubNavBar />
       {renderMobileMenu}
       {renderMenu}
-    </Box>
+    </AppBar>
   );
 }
