@@ -6,7 +6,7 @@ import { useState, useRef, useContext } from 'react';
 import SideGroupMenu from './SideGroupMenu/SideGroupMenu';
 import CategoryContext from '../../context/CategoryContext';
 
-export default function NavHistory() {
+export default function GroupSelector() {
   const { getMenu } = useContext(CategoryContext);
   const menu = getMenu();
   const [open, setOpen] = useState(false);
@@ -37,6 +37,7 @@ export default function NavHistory() {
             />
             <img src={menu.active.icon} alt='LargeGroup' />
             <Box
+              display={{ xs: 'none', md: 'flex' }}
               className={[
                 nStyles.arrow,
                 !open ? nStyles.hoverInactive : nStyles.hoverActive,

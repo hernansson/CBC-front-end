@@ -16,9 +16,7 @@ export default function Activity() {
         <Filters />
       </Box>
       <Box style={{ margin: 0 }}>&nbsp;</Box>
-      <Typography textAlign={'left'} color={'#737373'}>
-        {'October 2021'}
-      </Typography>
+      <Typography textAlign={'left'}>{'October 2021'}</Typography>
       <Box style={{ margin: 0 }}>&nbsp;</Box>
       {activity.map((act, idx) => (
         <Accordion

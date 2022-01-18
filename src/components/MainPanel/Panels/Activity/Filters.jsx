@@ -5,7 +5,7 @@ export default function Filters() {
   const mStyles = mainStyles();
   return (
     <Box sx={{ display: 'flex', flexDirection: 'row', columnGap: '15px' }}>
-      <Typography color={'#737373'}>Filter By:</Typography>
+      <Typography>Filter By:</Typography>
       <Box className={mStyles.ClearSelectContainer} sx={{ width: '146px' }}>
         <select class={mStyles.bounlessSelect} style={{ width: '160px' }}>
           <option value='Upcoming' selected=''>

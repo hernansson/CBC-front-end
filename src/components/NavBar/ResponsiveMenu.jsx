@@ -5,10 +5,9 @@ import NotificationsIcon from '@mui/icons-material/Notifications';
 import SettingsIcon from '@mui/icons-material/Settings';
 import SearchOutlinedIcon from '@mui/icons-material/SearchOutlined';
 import MeetingRoomIcon from '@mui/icons-material/MeetingRoom';
-import Typography from '@mui/material/Typography';
 import useStyles from './NavStyles';
-import Divider from '@mui/material/Divider';
 import MenuIcon from '@mui/icons-material/Menu';
+import { Typography, Divider } from '@mui/material/';
 import { useState, useRef } from 'react';
 import SideMenu from './SideMenu/SideMenu';
 import SideSearch from './SideSearch/SideSearch';
@@ -52,7 +51,7 @@ export default function ResponsiveMenu({ handleProfileMenuOpen }) {
           <NotificationsIcon />
         </Badge>
       </IconButton>
-      <Typography>{'Jessica Poller'}</Typography>
+      <Typography color='white'>{'Jessica Poller'}</Typography>
       <Box className={navStyles.generalHover}>
         <IconButton
           size='small'
@@ -60,8 +59,8 @@ export default function ResponsiveMenu({ handleProfileMenuOpen }) {
           color='inherit'
           sx={{ flexDirection: 'column' }}
         >
-          <SettingsIcon />
-          Settings
+          <SettingsIcon fontSize='large' />
+          <Typography variant='navBar'>Settings</Typography>
         </IconButton>
       </Box>
       <Box className={navStyles.generalHover}>
@@ -70,8 +69,8 @@ export default function ResponsiveMenu({ handleProfileMenuOpen }) {
           color='inherit'
           sx={{ flexDirection: 'column' }}
         >
-          <MeetingRoomIcon />
-          Logout
+          <MeetingRoomIcon fontSize='large' />
+          <Typography variant='navBar'>Logout</Typography>
         </IconButton>
       </Box>
       <Divider
@@ -90,8 +89,8 @@ export default function ResponsiveMenu({ handleProfileMenuOpen }) {
           color='inherit'
           sx={{ flexDirection: 'column' }}
         >
-          <SearchOutlinedIcon />
-          Search
+          <SearchOutlinedIcon fontSize='large' />
+          <Typography variant='navBar'>Search</Typography>
         </IconButton>
       </Box>
       <Box className={navStyles.generalHover}>
@@ -102,8 +101,8 @@ export default function ResponsiveMenu({ handleProfileMenuOpen }) {
           color='inherit'
           sx={{ flexDirection: 'column' }}
         >
-          <MenuIcon />
-          Menu
+          <MenuIcon fontSize='large' />
+          <Typography variant='navBar'>Menu</Typography>
         </IconButton>
       </Box>
       <SideMenu

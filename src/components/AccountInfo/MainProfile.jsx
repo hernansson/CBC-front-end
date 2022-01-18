@@ -1,5 +1,5 @@
-import Box from '@mui/material/Box';
-import { Typography } from '@material-ui/core';
+import { Box, Button, Typography } from '@mui/material';
+
 import accountStyles from './AccountStyles';
 import IconButton from '@mui/material/IconButton';
 import { dashboardList } from '../../constants/menu';
@@ -44,25 +44,27 @@ export default function MainProfile() {
           />
         </Box>
         <Box>
-          <img
-            className={accStyles.dashboard}
-            onMouseOver={(e) =>
-              (e.currentTarget.src =
-                'https://www.cbcins.com/Datasource2Demo/images/DashboardIconRed.svg')
-            }
-            onMouseLeave={(e) =>
-              (e.currentTarget.src =
-                'https://www.cbcins.com/Datasource2Demo/images/DashboardIcon.svg')
-            }
-            src='https://www.cbcins.com/Datasource2Demo/images/DashboardIcon.svg'
-            alt='dashboard'
-          />
-          <Box sx={{ display: 'flex' }}>
-            <Typography variant='body2' style={{ textDecoration: 'underline' }}>
-              My Dashboard
-            </Typography>
-            <InfoIcon sx={{ color: 'red' }} />
-          </Box>
+          <Button style={{ display: 'flex', flexDirection: 'column' }}>
+            <img
+              className={accStyles.dashboard}
+              onMouseOver={(e) =>
+                (e.currentTarget.src =
+                  'https://www.cbcins.com/Datasource2Demo/images/DashboardIconRed.svg')
+              }
+              onMouseLeave={(e) =>
+                (e.currentTarget.src =
+                  'https://www.cbcins.com/Datasource2Demo/images/DashboardIcon.svg')
+              }
+              src='https://www.cbcins.com/Datasource2Demo/images/DashboardIcon.svg'
+              alt='dashboard'
+            />
+            <Box sx={{ display: 'flex' }}>
+              <Typography style={{ textDecoration: 'underline' }}>
+                My Dashboard
+              </Typography>
+              <InfoIcon sx={{ color: 'red' }} />
+            </Box>
+          </Button>
         </Box>
       </Box>
       <Box
@@ -74,7 +76,7 @@ export default function MainProfile() {
         }}
       >
         {dashboardList.map((dashItem) => (
-          <Link to='/'>
+          <Link to='/' style={{ textDecoration: 'none', color: 'black' }}>
             <div className={accStyles.iconButton}>
               <img
                 className={accStyles.icon}

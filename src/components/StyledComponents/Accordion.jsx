@@ -7,6 +7,7 @@ import ArrowForwardIosSharpIcon from '@mui/icons-material/ArrowForwardIosSharp';
 import InfoIcon from '@mui/icons-material/Info';
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
+import { Typography } from '@mui/material';
 const useStyles = makeStyles((theme) => ({
   arrowIcon: {
     transform: 'rotate(90deg)',
@@ -53,21 +54,26 @@ export const AccordionSummaryCustom = styled(
                 paddingBottom: '10px',
               }}
             >
-              <div style={{ fontWeight: '500' }}>{category}</div>
-              <div style={{ color: '#99999a' }}> {date}</div>
+              <Typography variant='mainAccordion'>{category}</Typography>
+              <Typography style={{ color: '#99999a' }}> {date}</Typography>
             </div>
           </div>
-          <div
+          <Typography
             style={{
-              fontFamily: 'Futura PT',
-              color: '#737373',
               textAlign: 'left',
               paddingLeft: '20px',
             }}
           >
             {summary}
-          </div>
-          <Link to='' style={{ display: 'flex', justifyContent: 'flex-end' }}>
+          </Typography>
+          <Link
+            to=''
+            style={{
+              display: 'flex',
+              justifyContent: 'flex-end',
+              color: 'black',
+            }}
+          >
             View Details
             <InfoIcon sx={{ color: 'red' }} />
           </Link>

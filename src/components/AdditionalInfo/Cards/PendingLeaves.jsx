@@ -37,17 +37,17 @@ export default function PendingLeaves() {
           <TableHead>
             <TableRow>
               <TableCell sx={{ padding: '0px' }}>
-                <Typography fontSize={'1.1rem'} fontWeight={600}>
+                <Typography fontSize={'1.1rem'} fontWeight={600} color={'#333'}>
                   Employee
                 </Typography>
               </TableCell>
               <TableCell style={{ textAlign: 'center' }}>
-                <Typography fontSize={'1.1rem'} fontWeight={600}>
+                <Typography fontSize={'1.1rem'} fontWeight={600} color={'#333'}>
                   Request#
                 </Typography>
               </TableCell>
               <TableCell style={{ textAlign: 'center' }}>
-                <Typography fontSize={'1.1rem'} fontWeight={600}>
+                <Typography fontSize={'1.1rem'} fontWeight={600} color={'#333'}>
                   Details
                 </Typography>
               </TableCell>
@@ -64,16 +64,12 @@ export default function PendingLeaves() {
                   scope='row'
                   style={{ borderBottom: 'none', textAlign: 'left' }}
                 >
-                  <Typography color={'#737373'} fontSize={'1rem'}>
-                    {row.name}
-                  </Typography>
+                  <Typography>{row.name}</Typography>
                 </TableCell>
                 <TableCell
                   style={{ borderBottom: 'none', textAlign: 'center' }}
                 >
-                  <Typography color={'#737373'} fontSize={'1rem'}>
-                    {row.calories}
-                  </Typography>
+                  <Typography>{row.calories}</Typography>
                 </TableCell>
                 <TableCell
                   style={{ borderBottom: 'none', textAlign: 'center' }}

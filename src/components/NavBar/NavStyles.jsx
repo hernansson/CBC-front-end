@@ -2,8 +2,8 @@ import { makeStyles } from '@material-ui/core/styles';
 
 const useStyles = makeStyles((theme) => ({
   profileImg: {
-    width: '2.5vw',
-    height: '2.5vw',
+    width: '3rem',
+    height: '3rem',
     borderRadius: '3vw',
     border: '2px solid #D9202A',
     overflow: 'hidden',

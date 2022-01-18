@@ -1,15 +1,17 @@
-import { Box, ListItemText, List, ListItem } from '@material-ui/core';
 import { Link } from 'react-router-dom';
-import Table from '@mui/material/Table';
-import TableBody from '@mui/material/TableBody';
 import TableCell, { tableCellClasses } from '@mui/material/TableCell';
 import TableContainer from '@mui/material/TableContainer';
-import TableHead from '@mui/material/TableHead';
-import TableRow from '@mui/material/TableRow';
-import Paper from '@mui/material/Paper';
 import cardStyles from './CardsStyle';
 import InfoIcon from '@mui/icons-material/Info';
-import { Typography } from '@mui/material';
+import {
+  Typography,
+  Box,
+  Table,
+  TableBody,
+  TableHead,
+  TableRow,
+  Paper,
+} from '@mui/material';
 function createData(name, calories, fat) {
   return { name, calories, fat };
 }
@@ -37,17 +39,17 @@ export default function NewLeaves() {
           <TableHead>
             <TableRow>
               <TableCell sx={{ padding: '0px' }}>
-                <Typography fontSize={'1.1rem'} fontWeight={600}>
+                <Typography fontSize={'1.1rem'} fontWeight={600} color={'#333'}>
                   Employee
                 </Typography>
               </TableCell>
               <TableCell style={{ textAlign: 'center' }}>
-                <Typography fontSize={'1.1rem'} fontWeight={600}>
+                <Typography fontSize={'1.1rem'} fontWeight={600} color={'#333'}>
                   Request#
                 </Typography>
               </TableCell>
               <TableCell style={{ textAlign: 'center' }}>
-                <Typography fontSize={'1.1rem'} fontWeight={600}>
+                <Typography fontSize={'1.1rem'} fontWeight={600} color={'#333'}>
                   Details
                 </Typography>
               </TableCell>
@@ -64,16 +66,12 @@ export default function NewLeaves() {
                   scope='row'
                   style={{ borderBottom: 'none', textAlign: 'left' }}
                 >
-                  <Typography color={'#737373'} fontSize={'1rem'}>
-                    {row.name}
-                  </Typography>
+                  <Typography>{row.name}</Typography>
                 </TableCell>
                 <TableCell
                   style={{ borderBottom: 'none', textAlign: 'center' }}
                 >
-                  <Typography color={'#737373'} fontSize={'1rem'}>
-                    {row.calories}
-                  </Typography>
+                  <Typography>{row.calories}</Typography>
                 </TableCell>
                 <TableCell
                   style={{ borderBottom: 'none', textAlign: 'center' }}

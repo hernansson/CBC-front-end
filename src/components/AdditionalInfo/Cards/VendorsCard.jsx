@@ -1,4 +1,5 @@
 import { Box, ListItemText, List, ListItem } from '@material-ui/core';
+import { Typography } from '@mui/material';
 import { Link } from 'react-router-dom';
 import cardStyles from './CardsStyle';
 
@@ -8,10 +9,10 @@ export default function VendorsCard() {
     <Box className={cStyles.card}>
       <List className={cStyles.resetPaddings}>
         <ListItem>
-          <ListItemText primary='Vendors' />
+          <Typography>Vendor 1</Typography>
         </ListItem>
         <ListItem>
-          <ListItemText primary='Vendors 2' />
+          <Typography>Vendor 2</Typography>
         </ListItem>
       </List>
 

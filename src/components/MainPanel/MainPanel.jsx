@@ -32,7 +32,7 @@ export default function MainPanel() {
           size='small'
           type='search'
           label='Search Activities'
-          sx={{ width: '12rem' }}
+          sx={{ width: '12rem', backgroundColor: 'white' }}
           InputProps={{
             endAdornment: (
               <InputAdornment>
@@ -74,7 +74,6 @@ export default function MainPanel() {
               label={tab.title}
               sx={{
                 textTransform: 'none',
-                fontFamily: 'Futura PT',
                 fontSize: '1em',
               }}
             />

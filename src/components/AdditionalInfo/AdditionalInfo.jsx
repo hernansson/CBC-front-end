@@ -1,13 +1,7 @@
-import { styled } from '@mui/material/styles';
-import ArrowForwardIosSharpIcon from '@mui/icons-material/ArrowForwardIosSharp';
-import MuiAccordion from '@mui/material/Accordion';
-import MuiAccordionSummary from '@mui/material/AccordionSummary';
-import MuiAccordionDetails from '@mui/material/AccordionDetails';
-import Typography from '@mui/material/Typography';
 import { useState } from 'react';
-import { Box } from '@material-ui/core';
 import { Link } from 'react-router-dom';
 import { cards } from './Cards/cardList';
+import { Box, Typography } from '@mui/material';
 import {
   AccordionSummary,
   AccordionDetails,
@@ -37,12 +31,7 @@ export default function AdditionalInfo() {
                 width: '100%',
               }}
             >
-              <Box
-                component={'span'}
-                sx={{ fontSize: '1.5rem', fontWeight: ' 300' }}
-              >
-                {card.title}
-              </Box>
+              <Typography variant='h2'>{card.title}</Typography>
               <Link
                 to={card.link}
                 style={{ color: '#D9202A', textDecoration: 'none' }}

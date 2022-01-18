@@ -1,19 +1,24 @@
 import { useState } from 'react';
 import useStyles from './NavStyles';
-import AppBar from '@mui/material/AppBar';
-import Box from '@mui/material/Box';
-import Toolbar from '@mui/material/Toolbar';
-import IconButton from '@mui/material/IconButton';
-import Badge from '@mui/material/Badge';
-import MenuItem from '@mui/material/MenuItem';
-import Menu from '@mui/material/Menu';
 import AccountCircle from '@mui/icons-material/AccountCircle';
 import MailIcon from '@mui/icons-material/Mail';
 import NotificationsIcon from '@mui/icons-material/Notifications';
 import MoreIcon from '@mui/icons-material/MoreVert';
-import NavHistory from './NavHistory';
+import {
+  Typography,
+  Menu,
+  MenuItem,
+  Badge,
+  Toolbar,
+  Box,
+  AppBar,
+  IconButton,
+  Divider,
+} from '@mui/material';
+import GroupSelector from './GroupSelector';
 import ResponsiveMenu from './ResponsiveMenu';
 import SubNavBar from '../SubNavBar/SubNavBar';
+import NavigationHistory from './NavigationHistory';
 
 export default function NavBar() {
   const [anchorEl, setAnchorEl] = useState(null);
@@ -112,8 +117,24 @@ export default function NavBar() {
   return (
     <AppBar position='sticky' sx={{ backgroundColor: 'black', height: '4rem' }}>
       <Toolbar style={{ padding: '0rem 1rem' }}>
-        <Box sx={{ display: 'flex', alignItems: 'center', height: '100%' }}>
-          <NavHistory />
+        <Box
+          sx={{
+            display: 'flex',
+            alignItems: 'center',
+            height: '100%',
+            columnGap: '10px',
+          }}
+        >
+          <GroupSelector />
+          <Divider
+            orientation='vertical'
+            sx={{
+              borderColor: 'white',
+              borderWidth: '1px',
+              height: '35px',
+            }}
+          />
+          <NavigationHistory />
         </Box>
         <Box sx={{ flexGrow: 1 }} />
         <Box
