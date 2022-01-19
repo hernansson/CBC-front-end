@@ -42,7 +42,7 @@ export const AccordionSummaryCustom = styled(
         >
           <div style={{ display: 'flex', flexDirection: 'row' }}>
             <ArrowForwardIosSharpIcon
-              className={rotateArrow && styles.arrowIcon}
+              className={rotateArrow ? styles.arrowIcon : ''}
               sx={{ fontSize: '1.2rem', color: '#D9202A', paddingRight: '5px' }}
             />
             <div

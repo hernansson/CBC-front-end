@@ -52,7 +52,6 @@ export default function NavBar() {
       anchorOrigin={{ vertical: 'bottom', horizontal: 'center' }}
       id={menuId}
       keepMounted
-      getContentAnchorEl={null}
       transformOrigin={{ vertical: 'top', horizontal: 'center' }}
       open={isMenuOpen}
       onClose={handleMenuClose}

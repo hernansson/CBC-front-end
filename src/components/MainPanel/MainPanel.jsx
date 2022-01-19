@@ -36,14 +36,14 @@ export default function MainPanel() {
         }}
       >
         <TextFieldFocus
-          focusColor='black'
+          focuscolor='black'
           size='small'
           type='search'
           label='Search Activities'
           sx={{ width: '12rem', backgroundColor: 'white' }}
           InputProps={{
             endAdornment: (
-              <InputAdornment>
+              <InputAdornment position='end'>
                 <SearchIcon sx={{ color: 'red' }} />
               </InputAdornment>
             ),
@@ -88,6 +88,7 @@ export default function MainPanel() {
                 textTransform: 'none',
                 fontSize: '1em',
               }}
+              key={idx}
             />
           ))}
         </Tabs>

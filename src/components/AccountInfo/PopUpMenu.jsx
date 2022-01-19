@@ -35,11 +35,11 @@ export default function PopUpMenu({ open, setOpen, anchorRef }) {
           >
             <Paper style={{ backgroundColor: 'rgba(0,0,0,.80)' }}>
               <MenuList>
-                {mainProfileMenu.map((menuItem, idx) => (
+                {mainProfileMenu.map((menuItem) => (
                   <MenuItem
                     component={Link}
                     to={menuItem.link}
-                    key={idx}
+                    key={mainProfileMenu.id}
                     sx={{
                       '&:hover': {
                         backgroundColor: 'red',

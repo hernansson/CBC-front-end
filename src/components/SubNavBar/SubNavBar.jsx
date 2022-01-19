@@ -72,6 +72,7 @@ export default function SubNavBar() {
                 transition: 'all 0.2s ease-in-out',
                 textTransform: 'none',
               }}
+              key={idx}
             ></Tab>
           ))}
         </Tabs>

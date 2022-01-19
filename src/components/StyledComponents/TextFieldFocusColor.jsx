@@ -3,41 +3,41 @@ import styled from '@emotion/styled';
 
 export const TextFieldFocus = styled(TextField, {
   shouldForwardProp: (props) =>
-    props !== 'focusColor' ||
-    props !== 'labelColor' ||
-    props !== 'borderColor' ||
-    props !== 'hoverColor' ||
-    props !== 'inputColor',
+    props !== 'focuscolor' ||
+    props !== 'labelcolor' ||
+    props !== 'bordercolor' ||
+    props !== 'hovercolor' ||
+    props !== 'inputcolor',
 })((p) => ({
   // input label when focused
   '& label.Mui-focused': {
-    color: p.error ? 'red' : p.focusColor,
+    color: p.error ? 'red' : p.focuscolor,
   },
   // focused color for input with variant='standard'
   '& .MuiInput-underline:after': {
-    borderBottomColor: p.focusColor,
+    borderBottomColor: p.focuscolor,
   },
   // focused color for input with variant='filled'
   '& .MuiFilledInput-underline:after': {
-    borderBottomColor: p.focusColor,
+    borderBottomColor: p.focuscolor,
   },
   // focused color for input with variant='outlined'
   '& .MuiOutlinedInput-root': {
     '&.Mui-focused fieldset': {
-      borderColor: p.error ? 'red' : p.focusColor,
+      borderColor: p.error ? 'red' : p.focuscolor,
     },
     '& fieldset': {
-      borderColor: p.borderColor,
+      borderColor: p.bordercolor,
     },
     '&:hover fieldset': {
-      borderColor: p.error ? 'red' : p.hoverColor,
+      borderColor: p.error ? 'red' : p.hovercolor,
     },
   },
   '& input': {
-    color: p.inputColor,
+    color: p.inputcolor,
   },
 
   '& label': {
-    color: p.error ? 'red' : p.labelColor,
+    color: p.error ? 'red' : p.labelcolor,
   },
 }));

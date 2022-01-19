@@ -53,7 +53,7 @@ export default function SearchForm({ handleClose }) {
   return (
     <div>
       <ThemeProvider theme={theme}>
-        <Paper style={{ backgroundColor: 'rgba(0,0,0,.80)' }}>
+        <Paper style={{ backgroundColor: 'rgba(0,0,0,.90)' }}>
           <Box px={3} py={2}>
             <Typography
               variant='h6'
@@ -77,7 +77,13 @@ export default function SearchForm({ handleClose }) {
                 spacing={1}
               >
                 {accountInputs.map((input, idx) => (
-                  <Grid item xs={12} sm={6} style={{ textAlign: 'left' }}>
+                  <Grid
+                    item
+                    xs={12}
+                    sm={6}
+                    style={{ textAlign: 'left' }}
+                    key={idx}
+                  >
                     {input.options ? (
                       <Box style={{ paddingTop: '4px' }}>
                         <FormControl
@@ -89,11 +95,11 @@ export default function SearchForm({ handleClose }) {
                             {input.label}
                           </InputLabel>
                           <SelectCustom
-                            inputColor='white'
-                            hoverColor='white'
-                            borderColor='white'
-                            labelColor='white'
-                            focusColor='white'
+                            inputcolor='white'
+                            hovercolor='white'
+                            bordercolor='white'
+                            labelcolor='white'
+                            focuscolor='white'
                             name={input.fieldName}
                             value={selected[input.fieldName]}
                             label={input.label}
@@ -101,7 +107,7 @@ export default function SearchForm({ handleClose }) {
                             variant='outlined'
                           >
                             {input.options.map((option, idx) => (
-                              <MenuItem value={option.value}>
+                              <MenuItem value={option.value} key={idx}>
                                 {option.label}
                               </MenuItem>
                             ))}
@@ -111,11 +117,11 @@ export default function SearchForm({ handleClose }) {
                     ) : (
                       <>
                         <TextFieldFocus
-                          inputColor='white'
-                          hoverColor='white'
-                          borderColor='white'
-                          labelColor='white'
-                          focusColor='white'
+                          inputcolor='white'
+                          hovercolor='white'
+                          bordercolor='white'
+                          labelcolor='white'
+                          focuscolor='white'
                           id={input.fieldName}
                           name={input.fieldName}
                           label={input.label}
@@ -138,13 +144,19 @@ export default function SearchForm({ handleClose }) {
                   </Grid>
                 ))}
                 {employeeInputs.map((input, idx) => (
-                  <Grid item xs={12} sm={6} style={{ textAlign: 'left' }}>
+                  <Grid
+                    item
+                    xs={12}
+                    sm={6}
+                    style={{ textAlign: 'left' }}
+                    key={idx}
+                  >
                     <TextFieldFocus
-                      inputColor='white'
-                      hoverColor='white'
-                      borderColor='white'
-                      labelColor='white'
-                      focusColor='white'
+                      inputcolor='white'
+                      hovercolor='white'
+                      bordercolor='white'
+                      labelcolor='white'
+                      focuscolor='white'
                       id={input.fieldName}
                       name={input.fieldName}
                       label={input.label}
@@ -165,12 +177,13 @@ export default function SearchForm({ handleClose }) {
                   </Grid>
                 ))}
 
-                {booleanInputs.map((input) => (
+                {booleanInputs.map((input, idx) => (
                   <Grid
                     item
                     xs={12}
                     sm={6}
                     style={{ textAlign: 'left', padding: '0px' }}
+                    key={idx}
                   >
                     <FormControlLabel
                       control={
@@ -182,8 +195,6 @@ export default function SearchForm({ handleClose }) {
                           render={({ field: { onChange } }) => (
                             <Checkbox
                               color='primary'
-                              iconStyle={{ fill: 'white' }}
-                              labelStyle={{ color: 'white' }}
                               onChange={(e) => onChange(e.target.checked)}
                             />
                           )}
@@ -208,15 +219,17 @@ export default function SearchForm({ handleClose }) {
             >
               <Button
                 variant='contained'
-                color='primary'
+                style={{ backgroundColor: '#D9202A', color: 'white' }}
                 onClick={handleSubmit(onSubmit)}
+                endIcon={<SearchIcon />}
               >
                 Register
               </Button>
               <Button
                 variant='contained'
-                color='secondary'
+                style={{ backgroundColor: '#D9202A', color: 'white' }}
                 onClick={handleClose}
+                endIcon={<SearchIcon />}
               >
                 Close
               </Button>

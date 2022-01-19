@@ -85,7 +85,11 @@ export default function MainProfile() {
           }}
         >
           {dashboardList.map((dashItem) => (
-            <Link to='/' style={{ textDecoration: 'none', color: 'black' }}>
+            <Link
+              to='/'
+              style={{ textDecoration: 'none', color: 'black' }}
+              key={dashItem.id}
+            >
               <div className={accStyles.iconButton}>
                 <img
                   className={accStyles.icon}

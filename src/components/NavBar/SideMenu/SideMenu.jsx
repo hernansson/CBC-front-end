@@ -51,6 +51,7 @@ export default function SideMenu({ open, setOpen, anchorRef }) {
                         },
                         transition: 'all 0.2s ease-in-out',
                       }}
+                      key={idx}
                     >
                       <ListItemIcon sx={{ paddingRight: '10px' }}>
                         <img

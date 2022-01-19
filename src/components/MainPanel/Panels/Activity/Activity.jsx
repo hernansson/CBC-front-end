@@ -37,6 +37,7 @@ export default function Activity({ expandedPanels, setExpandedPanels }) {
             marginBottom: '10px',
             boxShadow: '0px 0px 10px rgb(0 0 0 / 25%)',
           }}
+          key={idx}
         >
           <AccordionSummaryCustom
             category={act.category}

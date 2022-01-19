@@ -12,7 +12,7 @@ export default function ContactsCard() {
   return (
     <Box className={cStyle.card}>
       {contactsData.map((contact, idx) => (
-        <>
+        <Box key={idx}>
           <Box style={{ textAlign: 'left' }}>
             <Typography
               style={{
@@ -42,7 +42,7 @@ export default function ContactsCard() {
             {` ${contact.contactEmail}`}
           </Typography>
           <p style={{ margin: 0 }}>&nbsp;</p>
-        </>
+        </Box>
       ))}
 
       <Link to='' style={{ color: 'red' }}>

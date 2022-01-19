@@ -17,6 +17,7 @@ export default function NavigationHistory(props) {
             to={history.link}
             state={[...location.state]}
             style={{ display: 'flex', flexDirection: 'row', columnGap: '5px' }}
+            key={idx}
           >
             <Typography>»</Typography>
             <Typography

@@ -13,7 +13,7 @@ export default function AccountInfo() {
       </Box>
 
       <Box sx={{ color: 'black', padding: '1vw 2vw' }}>
-        <span class='red'>«</span> Back to Account Search
+        <span>«</span> Back to Account Search
       </Box>
     </Box>
   );

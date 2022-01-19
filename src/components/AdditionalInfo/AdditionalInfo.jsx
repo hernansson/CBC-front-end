@@ -20,6 +20,7 @@ export default function AdditionalInfo() {
         <Accordion
           expanded={expanded === `panel${idx}`}
           onChange={handleChange(`panel${idx}`)}
+          key={idx}
         >
           <AccordionSummary sx={{}}>
             <Box
