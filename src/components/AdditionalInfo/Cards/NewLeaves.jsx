@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom';
 import TableCell, { tableCellClasses } from '@mui/material/TableCell';
 import TableContainer from '@mui/material/TableContainer';
 import cardStyles from './CardsStyle';
-import InfoIcon from '@mui/icons-material/Info';
+import ExitToAppIcon from '@mui/icons-material/ExitToApp';
 import {
   Typography,
   Box,
@@ -76,7 +76,7 @@ export default function NewLeaves() {
                 <TableCell
                   style={{ borderBottom: 'none', textAlign: 'center' }}
                 >
-                  <InfoIcon sx={{ color: 'red' }} />
+                  <ExitToAppIcon sx={{ color: 'red' }} />
                 </TableCell>
               </TableRow>
             ))}

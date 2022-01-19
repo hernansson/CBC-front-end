@@ -134,7 +134,9 @@ export default function NavBar() {
               height: '35px',
             }}
           />
-          <NavigationHistory />
+          <Box sx={{ display: { xs: 'none', md: 'flex' } }}>
+            <NavigationHistory />
+          </Box>
         </Box>
         <Box sx={{ flexGrow: 1 }} />
         <Box

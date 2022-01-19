@@ -184,3 +184,10 @@ export const sideMenu = [
     path: 'commisions',
   },
 ];
+export const mainProfileMenu = [
+  { id: 1, title: 'Account Information', link: '' },
+  { id: 2, title: 'Account Settings', link: '' },
+  { id: 3, title: 'Employee Fields', link: '' },
+  { id: 4, title: 'CBC Team', link: '' },
+  { id: 5, title: 'Comissions', link: '' },
+];

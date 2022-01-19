@@ -16,9 +16,8 @@ export default function SubNavBar() {
   const handleChange = (event, newValue) => {
     setValue(newValue);
   };
-  const handleTab = (link) => {
-    console.log(link);
-    navigate(link);
+  const handleTab = (link, title) => {
+    navigate(link, { state: [{ link, title }] });
   };
 
   return (
@@ -62,7 +61,7 @@ export default function SubNavBar() {
         >
           {kingsHawaiianMenu.map((menuItem, idx) => (
             <Tab
-              onClick={() => handleTab(menuItem.path)}
+              onClick={() => handleTab(menuItem.path, menuItem.title)}
               iconPosition={'start'}
               icon={<img src={menuItem.icon} />}
               label={menuItem.title}

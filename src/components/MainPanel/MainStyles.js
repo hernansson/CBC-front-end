@@ -19,6 +19,7 @@ const mainStyles = makeStyles((theme) => ({
     paddingLeft: '1.5vw',
   },
   expand: {
+    cursor: 'pointer',
     color: '#66666A',
     padding: '0.5em 1em',
     backgroundColor: '#FCFCFD',
@@ -28,6 +29,7 @@ const mainStyles = makeStyles((theme) => ({
     fontSize: '0.875em',
   },
   collapse: {
+    cursor: 'pointer',
     color: '#3D3D3D',
     padding: '0.5em 1em',
     backgroundColor: '#E9E9EF',

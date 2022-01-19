@@ -8,6 +8,7 @@ import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
 import cardStyles from './CardsStyle';
+import ExitToAppIcon from '@mui/icons-material/ExitToApp';
 import InfoIcon from '@mui/icons-material/Info';
 import { Typography } from '@mui/material';
 function createData(name, calories, fat) {
@@ -74,7 +75,7 @@ export default function PendingLeaves() {
                 <TableCell
                   style={{ borderBottom: 'none', textAlign: 'center' }}
                 >
-                  <InfoIcon sx={{ color: 'red' }} />
+                  <ExitToAppIcon sx={{ color: 'red' }} />
                 </TableCell>
               </TableRow>
             ))}

@@ -12,9 +12,17 @@ import SearchIcon from '@mui/icons-material/Search';
 
 export default function MainPanel() {
   const [value, setValue] = useState(0);
-
   const handleChange = (event, newValue) => {
     setValue(newValue);
+  };
+  const [expandedPanels, setExpandedPanels] = useState(null);
+  const expandAllPanels = () => {
+    const expandAll = expandedPanels.map((panel) => ({ active: true }));
+    setExpandedPanels(expandAll);
+  };
+  const collapseAllPanels = () => {
+    const expandAll = expandedPanels.map((panel) => ({ active: false }));
+    setExpandedPanels(expandAll);
   };
 
   const mStyles = mainStyles();
@@ -42,8 +50,12 @@ export default function MainPanel() {
           }}
         />
         <Box>
-          <span className={mStyles.expand}>Expand all</span>
-          <span className={mStyles.collapse}>Collapse All</span>
+          <span onClick={expandAllPanels} className={mStyles.expand}>
+            Expand all
+          </span>
+          <span onClick={collapseAllPanels} className={mStyles.collapse}>
+            Collapse All
+          </span>
         </Box>
       </Box>
       <Box>&nbsp;</Box>
@@ -80,7 +92,10 @@ export default function MainPanel() {
           ))}
         </Tabs>
         <TabPanel value={value} index={0}>
-          <Activity />
+          <Activity
+            expandedPanels={expandedPanels}
+            setExpandedPanels={setExpandedPanels}
+          />
         </TabPanel>
         <TabPanel value={value} index={1}>
           Item Two
