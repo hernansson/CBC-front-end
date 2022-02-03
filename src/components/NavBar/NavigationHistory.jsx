@@ -9,7 +9,7 @@ export default function NavigationHistory(props) {
   return (
     <>
       <Typography
-        style={{ color: '#d22f2f', paddingRight: '5px' }}
+        style={{ color: '#d22f2f', paddingRight: '5px', fontSize:'1.05vw', fontWeight:'500' }}
       >{` King's Hawaiian`}</Typography>
       {location.state?.map((history, idx) => {
         return (

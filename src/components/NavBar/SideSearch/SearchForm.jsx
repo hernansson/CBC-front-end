@@ -129,11 +129,12 @@ export default function SearchForm({ handleClose }) {
                           fullWidth
                           margin='dense'
                           autoComplete='off'
+                          variant='standard'
+                          sx={{backgroundColor:'#413e3e', borderRadius:'4px'}}
                           {...register(input.fieldName)}
                           error={errors[input.fieldName] ? true : false}
                         />
                         <Typography
-                          variant='inherit'
                           color='error'
                           style={{ textAlign: 'left' }}
                         >
@@ -164,6 +165,8 @@ export default function SearchForm({ handleClose }) {
                       fullWidth
                       margin='dense'
                       autoComplete='off'
+                      variant='standard'
+                      sx={{backgroundColor:'#413e3e', borderRadius:'4px'}}
                       {...register(input.fieldName)}
                       error={errors[input.fieldName] ? true : false}
                     />

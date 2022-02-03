@@ -35,9 +35,13 @@ export const TextFieldFocus = styled(TextField, {
   },
   '& input': {
     color: p.inputcolor,
+    paddingLeft:'8px'
   },
 
   '& label': {
+    paddingTop:'-16px',
+    
     color: p.error ? 'red' : p.labelcolor,
+    paddingLeft:'8px'
   },
 }));

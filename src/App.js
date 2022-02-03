@@ -12,7 +12,7 @@ function App() {
     <div className='App'>
       <ThemeProvider theme={theme}>
         <CategoryProvider>
-          <NavBar />
+          <NavBar  />
           <div className='bodyContent'>
             <Routes>
               <Route path='/' element={<Home />} />

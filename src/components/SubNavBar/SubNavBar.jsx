@@ -4,7 +4,7 @@ import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
 import IconButton from '@mui/material/IconButton';
 import FolderOpenIcon from '@mui/icons-material/FolderOpen';
-import { Typography } from '@material-ui/core';
+import { Typography } from '@mui/material';
 import { kingsHawaiianMenu } from '../../constants/menu';
 import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
@@ -35,6 +35,7 @@ export default function SubNavBar() {
           sx={{
             display: { xs: 'none', sm: 'none', md: 'flex' },
             alignItems: 'center',
+            backgroundColor: '#D9202A'
           }}
         >
           <IconButton color='inherit' size='large'>
@@ -42,7 +43,7 @@ export default function SubNavBar() {
           </IconButton>
           <Typography
             style={{ width: 'max-content' }}
-            variant='h5'
+            variant='navClient'
           >{`King's Hawaiian`}</Typography>
         </Box>
         <Tabs
@@ -71,6 +72,8 @@ export default function SubNavBar() {
                 },
                 transition: 'all 0.2s ease-in-out',
                 textTransform: 'none',
+                fontWeight:'300',
+                
               }}
               key={idx}
             ></Tab>

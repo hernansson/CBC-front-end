@@ -5,7 +5,7 @@ export default function CompanyCard() {
   const cStyle = cardStyles();
   return (
     <Box className={cStyle.card}>
-      <Typography style={{ color: '#33333A', fontWeight: '600' }}>
+      <Typography sx={{ color: '#33333A', fontWeight: '600', fontFamily:`'Futura PT 2', 'Trebuchet MS', Verdana, Helvetica, sans-serif`}}>
         CORPORATE OFFICE
       </Typography>
       <Typography>19161 Harborgate Way</Typography>
